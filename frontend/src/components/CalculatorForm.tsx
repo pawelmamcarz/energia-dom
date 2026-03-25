@@ -51,7 +51,8 @@ export default function CalculatorForm() {
           type="range"
           min={0} max={30} step={0.5}
           value={input.pv_kwp}
-          onChange={(e) => setInput({ pv_kwp: parseFloat(e.target.value) })}
+          onInput={(e) => setInput({ pv_kwp: Number((e.target as HTMLInputElement).value) })}
+          onChange={(e) => setInput({ pv_kwp: Number(e.target.value) })}
           className="w-full accent-[var(--green)]"
         />
         <div className="flex justify-between text-xs text-[var(--text-dim)]">
@@ -68,7 +69,8 @@ export default function CalculatorForm() {
           type="range"
           min={0} max={30} step={1}
           value={input.battery_kwh}
-          onChange={(e) => setInput({ battery_kwh: parseFloat(e.target.value) })}
+          onInput={(e) => setInput({ battery_kwh: Number((e.target as HTMLInputElement).value) })}
+          onChange={(e) => setInput({ battery_kwh: Number(e.target.value) })}
           className="w-full accent-[var(--blue)]"
         />
         <div className="flex justify-between text-xs text-[var(--text-dim)]">
@@ -95,13 +97,14 @@ export default function CalculatorForm() {
       {/* Monthly consumption */}
       <div>
         <label className="flex items-center gap-2 text-sm font-medium text-[var(--text-muted)] mb-2">
-          Zuzycie miesiecznie: <span className="text-[var(--amber)] font-bold">{input.monthly_consumption_kwh} kWh</span>
+          Zuzycie miesiecznie: <span className="text-[var(--amber)] font-bold">{Math.round(input.monthly_consumption_kwh).toLocaleString("pl-PL")} kWh</span>
         </label>
         <input
           type="range"
           min={100} max={5000} step={50}
           value={input.monthly_consumption_kwh}
-          onChange={(e) => setInput({ monthly_consumption_kwh: parseFloat(e.target.value) })}
+          onInput={(e) => setInput({ monthly_consumption_kwh: Number((e.target as HTMLInputElement).value) })}
+          onChange={(e) => setInput({ monthly_consumption_kwh: Number(e.target.value) })}
           className="w-full accent-[var(--amber)]"
         />
         <div className="flex justify-between text-xs text-[var(--text-dim)]">
