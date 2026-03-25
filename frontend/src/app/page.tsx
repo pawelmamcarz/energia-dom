@@ -10,7 +10,6 @@ import { useCalculatorStore } from "@/store/calculator";
 
 export default function Home() {
   const result = useCalculatorStore((s) => s.result);
-  const error = useCalculatorStore((s) => s.error);
 
   return (
     <div className="min-h-screen p-4 md:p-8">
@@ -36,13 +35,7 @@ export default function Home() {
 
           {/* Right: Results */}
           <div className="flex-1 min-w-0">
-            {error && (
-              <div className="rounded-xl border border-[var(--red)]/30 bg-[var(--red)]/10 p-4 mb-6 text-[var(--red)]">
-                {error}
-              </div>
-            )}
-
-            {!result && !error && (
+            {!result && (
               <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-12 text-center text-[var(--text-muted)]">
                 <div className="text-5xl mb-4">&#9889;</div>
                 <p className="text-lg">Ustaw parametry i kliknij &quot;Oblicz koszty&quot;</p>
@@ -66,7 +59,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="text-center text-xs text-[var(--text-dim)] mt-8 pb-4">
-          Energia Dom v1.0 | Dane PV oparte na PVGIS dla Polski | Taryfy G11/G12/G12w/G13 | Net-metering 80%
+          Energia Dom v1.0 | Dane PV oparte na PVGIS dla Polski | Net-metering 80%
         </div>
       </div>
     </div>
