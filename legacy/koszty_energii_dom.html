@@ -49,7 +49,7 @@ tr:hover td { background: #334155; }
 </head>
 <body>
 <div class="container">
-  <h1>Analiza Kosztow Energetycznych <span class="version-tag">v4</span></h1>
+  <h1>Analiza Kosztow Energetycznych <span class="version-tag">v5</span></h1>
   <p class="subtitle">Dom Jesionowa | Mar 2025 - Lut 2026 (12 mies.) | G12w | Magazyn w sieci 80%<br>
   PV: <span class="src-badge src-fs">Fusion Solar</span> portal (dokladne dane miesieczne) |
   Siec: <span class="src-badge src-csv">CSV</span> Zamel MEW-02 (mar-sie) + <span class="src-badge src-ha">HA</span> (wrz-lut)</p>
@@ -58,8 +58,8 @@ tr:hover td { background: #334155; }
   <div class="grid">
     <div class="card nm-highlight">
       <div class="card-title">Koszt energii rocznie <span class="nm-badge">z NM 80%</span></div>
-      <div class="card-value amber">~8 747 PLN</div>
-      <div class="card-detail">~729 PLN/mies. (prad + gaz)</div>
+      <div class="card-value amber">~8 548 PLN</div>
+      <div class="card-detail">~712 PLN/mies.</div>
     </div>
     <div class="card">
       <div class="card-title">Zuzycie ogolem</div>
@@ -68,13 +68,13 @@ tr:hover td { background: #334155; }
     </div>
     <div class="card">
       <div class="card-title">Produkcja PV <span class="src-badge src-fs">Fusion Solar</span></div>
-      <div class="card-value green">~17 086 kWh</div>
+      <div class="card-value green">~17 084 kWh</div>
       <div class="card-detail">Pokrycie ~56% zuzycia</div>
     </div>
     <div class="card nm-highlight">
       <div class="card-title">Kredyt magazyn w sieci <span class="nm-badge">NM 80%</span></div>
       <div class="card-value green">~1 556 PLN</div>
-      <div class="card-detail">3 027 kWh odzyskane (z 3 783 eksportu)</div>
+      <div class="card-detail">3 026 kWh odzyskane (z 3 783 eksportu)</div>
     </div>
   </div>
 
@@ -82,15 +82,15 @@ tr:hover td { background: #334155; }
   <div class="chart-card nm-highlight">
     <div class="chart-title">Przeplyw energii PV (rocznie)</div>
     <div class="flow-diagram">
-      <div class="flow-box"><div style="font-size:24px;font-weight:700" class="green">17 086 kWh</div><div style="font-size:12px;color:#94a3b8">Produkcja PV</div></div>
+      <div class="flow-box"><div style="font-size:24px;font-weight:700" class="green">17 084 kWh</div><div style="font-size:12px;color:#94a3b8">Produkcja PV</div></div>
       <div class="flow-arrow">&rarr;</div>
-      <div class="flow-box"><div style="font-size:24px;font-weight:700" class="blue">13 302 kWh</div><div style="font-size:12px;color:#94a3b8">Autokonsumpcja (78%)</div></div>
+      <div class="flow-box"><div style="font-size:24px;font-weight:700" class="blue">13 301 kWh</div><div style="font-size:12px;color:#94a3b8">Autokonsumpcja (78%)</div></div>
       <div style="color:#94a3b8">+</div>
       <div class="flow-box"><div style="font-size:24px;font-weight:700" class="amber">3 783 kWh</div><div style="font-size:12px;color:#94a3b8">Eksport do sieci (22%)</div></div>
       <div class="flow-arrow">&rarr;</div>
-      <div class="flow-box" style="border-color:#22c55e44"><div style="font-size:24px;font-weight:700" class="green">3 027 kWh</div><div style="font-size:12px;color:#94a3b8">Zwrot 80%</div><div class="flow-loss">-757 kWh strata (20%)</div></div>
+      <div class="flow-box" style="border-color:#22c55e44"><div style="font-size:24px;font-weight:700" class="green">3 026 kWh</div><div style="font-size:12px;color:#94a3b8">Zwrot 80%</div><div class="flow-loss">-757 kWh strata (20%)</div></div>
     </div>
-    <div style="text-align:center;margin-top:12px;font-size:14px">Efektywne wykorzystanie PV: <strong class="green">16 329 kWh</strong> z 17 086 kWh = <strong class="green">96%</strong></div>
+    <div style="text-align:center;margin-top:12px;font-size:14px">Efektywne wykorzystanie PV: <strong class="green">16 327 kWh</strong> z 17 084 kWh = <strong class="green">96%</strong></div>
   </div>
 
   <!-- Cost chart + Energy chart -->
@@ -114,17 +114,17 @@ tr:hover td { background: #334155; }
       <tbody>
         <tr><td>Mar 25*</td><td>981</td><td>196</td><td>1 494</td><td>2 280</td><td>600</td><td>&mdash;</td><td>550</td><td>-88</td><td class="amber">462</td><td><span class="src-badge src-csv">CSV*</span></td></tr>
         <tr><td>Kwi 25&#9888;</td><td>204</td><td>553</td><td>2 645</td><td>2 300</td><td>300</td><td>&mdash;</td><td>109</td><td>-235</td><td class="green">-127</td><td><span class="src-badge src-csv">CSV&#9888;</span></td></tr>
-        <tr><td>Maj 25</td><td>451</td><td>753</td><td>2 602</td><td>2 300</td><td>150</td><td>400</td><td>233</td><td>-311</td><td class="green">-78</td><td><span class="src-badge src-csv">CSV</span></td></tr>
-        <tr><td>Cze 25</td><td>169</td><td>911</td><td>2 676</td><td>1 935</td><td>100</td><td>500</td><td>85</td><td>-366</td><td class="green">-281</td><td><span class="src-badge src-csv">CSV</span></td></tr>
-        <tr><td>Lip 25</td><td>253</td><td>821</td><td>2 304</td><td>1 736</td><td>80</td><td>600</td><td>127</td><td>-330</td><td class="green">-203</td><td><span class="src-badge src-csv">CSV</span></td></tr>
-        <tr><td>Sie 25</td><td>135</td><td>415</td><td>2 478</td><td>2 198</td><td>420</td><td>&mdash;</td><td>68</td><td>-167</td><td class="green">-99</td><td><span class="src-badge src-csv">CSV</span></td></tr>
-        <tr><td>Wrz 25</td><td>438</td><td>53</td><td>1 345</td><td>1 581</td><td>119</td><td>828</td><td>233</td><td>-23</td><td>210</td><td><span class="src-badge src-ha">HA</span></td></tr>
-        <tr><td>Paz 25</td><td>1 740</td><td>25</td><td>546</td><td>2 118</td><td>376</td><td>1 311</td><td>975</td><td>-11</td><td>964</td><td><span class="src-badge src-ha">HA</span></td></tr>
-        <tr><td>Lis 25</td><td>2 995</td><td>17</td><td>272</td><td>3 061</td><td>966</td><td>1 769</td><td>1 679</td><td>-8</td><td>1 671</td><td><span class="src-badge src-ha">HA</span></td></tr>
-        <tr><td>Gru 25</td><td>3 391</td><td>10</td><td>154</td><td>3 327</td><td>1 367</td><td>1 304</td><td>1 851</td><td>-4</td><td>1 847</td><td><span class="src-badge src-ha">HA</span></td></tr>
-        <tr><td>Sty 26</td><td>4 798</td><td>11</td><td>190</td><td>4 673</td><td>1 726</td><td>1 636</td><td>2 620</td><td>-5</td><td class="red">2 615</td><td><span class="src-badge src-ha">HA</span></td></tr>
-        <tr><td>Lut 26*</td><td>2 884</td><td>18</td><td>378</td><td>3 038</td><td>1 130</td><td>1 428</td><td>1 575</td><td>-8</td><td>1 567</td><td><span class="src-badge src-ha">HA*</span></td></tr>
-        <tr class="highlight-row"><td>ROCZNE</td><td>18 438</td><td>3 783</td><td>17 086</td><td>30 547</td><td>7 334</td><td>9 777</td><td>10 104</td><td>-1 556</td><td>8 547</td><td></td></tr>
+        <tr><td>Maj 25</td><td>451</td><td>753</td><td>2 602</td><td>2 300</td><td>150</td><td>250</td><td>233</td><td>-311</td><td class="green">-78</td><td><span class="src-badge src-csv">CSV</span></td></tr>
+        <tr><td>Cze 25</td><td>169</td><td>911</td><td>2 676</td><td>1 935</td><td>100</td><td>300</td><td>85</td><td>-366</td><td class="green">-281</td><td><span class="src-badge src-csv">CSV</span></td></tr>
+        <tr><td>Lip 25</td><td>253</td><td>821</td><td>2 304</td><td>1 736</td><td>80</td><td>350</td><td>127</td><td>-330</td><td class="green">-203</td><td><span class="src-badge src-csv">CSV</span></td></tr>
+        <tr><td>Sie 25</td><td>135</td><td>415</td><td>2 478</td><td>2 198</td><td>420</td><td>382</td><td>68</td><td>-167</td><td class="green">-99</td><td><span class="src-badge src-csv">CSV</span></td></tr>
+        <tr><td>Wrz 25</td><td>438</td><td>53</td><td>1 345</td><td>1 581</td><td>119</td><td>520</td><td>233</td><td>-23</td><td>210</td><td><span class="src-badge src-ha">HA</span></td></tr>
+        <tr><td>Paz 25</td><td>1 740</td><td>25</td><td>546</td><td>2 118</td><td>376</td><td>673</td><td>975</td><td>-11</td><td>964</td><td><span class="src-badge src-ha">HA</span></td></tr>
+        <tr><td>Lis 25</td><td>2 995</td><td>17</td><td>272</td><td>3 061</td><td>966</td><td>1 035</td><td>1 679</td><td>-8</td><td>1 671</td><td><span class="src-badge src-ha">HA</span></td></tr>
+        <tr><td>Gru 25</td><td>3 391</td><td>10</td><td>154</td><td>3 327</td><td>1 367</td><td>920</td><td>1 851</td><td>-4</td><td>1 847</td><td><span class="src-badge src-ha">HA</span></td></tr>
+        <tr><td>Sty 26</td><td>4 798</td><td>11</td><td>190</td><td>4 673</td><td>1 726</td><td>1 146</td><td>2 620</td><td>-5</td><td class="red">2 615</td><td><span class="src-badge src-ha">HA</span></td></tr>
+        <tr><td>Lut 26*</td><td>2 884</td><td>18</td><td>378</td><td>3 038</td><td>1 130</td><td>1 119</td><td>1 575</td><td>-8</td><td>1 567</td><td><span class="src-badge src-ha">HA*</span></td></tr>
+        <tr class="highlight-row"><td>ROCZNE</td><td>18 439</td><td>3 783</td><td>17 084</td><td>30 547</td><td>7 334</td><td>6 695</td><td>10 105</td><td>-1 556</td><td>8 548</td><td></td></tr>
       </tbody>
     </table>
     <p class="note">* Mar 25: dane od 21.03, ekstrapolowane. &#9888; Kwi 25: awaria Zamela (~4 dni danych), grid ekstrapolowany. Lut 26: dane do 22.02.<br>
@@ -170,8 +170,8 @@ tr:hover td { background: #334155; }
   <!-- PV savings breakdown -->
   <div class="section-title">Rozklad oszczednosci PV</div>
   <div class="chart-card">
-    <div class="savings-bar"><div class="label">Autokonsumpcja (13 302 kWh, 78%)</div><div class="bar"><div class="fill" style="width:82%;background:linear-gradient(90deg,#22c55e,#16a34a)">7 289 PLN</div></div></div>
-    <div class="savings-bar"><div class="label">Magazyn w sieci 80% (3 027 kWh)</div><div class="bar"><div class="fill" style="width:18%;background:linear-gradient(90deg,#60a5fa,#3b82f6)">1 556 PLN</div></div></div>
+    <div class="savings-bar"><div class="label">Autokonsumpcja (13 301 kWh, 78%)</div><div class="bar"><div class="fill" style="width:82%;background:linear-gradient(90deg,#22c55e,#16a34a)">7 289 PLN</div></div></div>
+    <div class="savings-bar"><div class="label">Magazyn w sieci 80% (3 026 kWh)</div><div class="bar"><div class="fill" style="width:18%;background:linear-gradient(90deg,#60a5fa,#3b82f6)">1 556 PLN</div></div></div>
     <div class="savings-bar"><div class="label" style="color:#f87171">Strata sieciowa 20% (757 kWh)</div><div class="bar"><div class="fill" style="width:4%;background:linear-gradient(90deg,#f87171,#dc2626)">strata</div></div></div>
     <div class="savings-bar" style="margin-top:12px;padding-top:10px;border-top:1px solid #475569"><div class="label" style="font-weight:700">Lacznie PV savings</div><div class="bar"><div class="fill" style="width:100%;background:linear-gradient(90deg,#4ade80,#22c55e)">8 845 PLN</div></div></div>
   </div>
@@ -182,14 +182,14 @@ tr:hover td { background: #334155; }
     <div style="display:flex;gap:16px;flex-wrap:wrap">
       <div style="flex:1;min-width:200px;background:#334155;border-radius:8px;padding:16px;text-align:center;opacity:0.7">
         <div style="font-size:12px;color:#94a3b8">BEZ PV</div>
-        <div style="font-size:28px;font-weight:700" class="red">~16 939 PLN</div>
+        <div style="font-size:28px;font-weight:700" class="red">~17 393 PLN</div>
         <div style="font-size:12px;color:#94a3b8">rocznie</div>
       </div>
       <div style="flex:0;display:flex;align-items:center;font-size:24px;color:#4ade80">&rarr;</div>
       <div style="flex:1;min-width:200px;background:#22c55e15;border:1px solid #22c55e44;border-radius:8px;padding:16px;text-align:center">
         <div style="font-size:12px;color:#94a3b8">Z PV + NM 80%</div>
-        <div style="font-size:28px;font-weight:700" class="green">~8 747 PLN</div>
-        <div style="font-size:12px;color:#94a3b8">rocznie (oszcz. ~8 192 PLN)</div>
+        <div style="font-size:28px;font-weight:700" class="green">~8 548 PLN</div>
+        <div style="font-size:12px;color:#94a3b8">rocznie (oszcz. ~8 845 PLN)</div>
       </div>
     </div>
   </div>
@@ -205,11 +205,11 @@ tr:hover td { background: #334155; }
 
   <!-- Notes -->
   <div class="note" style="margin-top:30px;padding:16px;background:#1e293b;border-radius:8px;border:1px solid #334155">
-    <strong>Uwagi metodologiczne (v4):</strong><br><br>
+    <strong>Uwagi metodologiczne (v5):</strong><br><br>
     &bull; <strong>PV:</strong> Dokladne dane miesieczne z portalu Fusion Solar (Huawei). Sierpien: portal 2 478 kWh (integracja HA zainstalowana w polowie miesiaca, HA rejestrowal tylko 1 435 kWh).<br>
     &bull; <strong>Grid:</strong> Import/eksport z licznika Zamel MEW-02. CSV (mar-sie 2025, pelne miesiace), HA statistics (wrz 2025 - lut 2026). Sie: CSV pelny miesiac (HA mialo tylko polowe).<br>
     &bull; <strong>Kwiecien:</strong> Zamel mial awarie (tylko ~4 dni danych z ~30). Dane grid ekstrapolowane &#9888;<br>
-    &bull; <strong>Magazyn w sieci:</strong> 80% eksportu wraca jako darmowy import. 3 783 kWh eksportu &rarr; 3 027 kWh odzyskane (757 kWh strata).<br>
+    &bull; <strong>Magazyn w sieci:</strong> 80% eksportu wraca jako darmowy import. 3 783 kWh eksportu &rarr; 3 026 kWh odzyskane (757 kWh strata).<br>
     &bull; Kwiecien-sierpien: koszt netto ujemny &mdash; kredyt NM przekracza koszt importu z sieci.<br>
     &bull; Taryfa G12w: peak 0.72 PLN/kWh, offpeak 0.43 PLN/kWh. Podzial peak/offpeak szacunkowy.<br>
     &bull; Marzec 2025: dane grid od 21.03. Luty 2026: dane do 22.02. Oba ekstrapolowane.<br>
